@@ -19,7 +19,7 @@
     // font-family: 'Source Code Pro', monospace; 
     list-style: none;
     text-decoration: none;
-    color: var(--black);
+    color: white;
 }
 html {
     scroll-behavior: smooth;
@@ -32,9 +32,231 @@ html {
     
 }
 
+.background {
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: 16 / 9;
+    background: url(../img/background.png)  ;  
+    background-size:cover;                      
+    background-repeat: no-repeat;
+    background-position: center center;  
+    position: fixed;
+    z-index: -1;
+
+    // background-repeat: no-repeat;
+}
 
 .hero{
+    width: 40%;
     
+    // background-color: red;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translateX(-50%);
+    // transform: translate(-50%, -50%);
+    // -webkit-transform: translate(-50%,-50%);
+    
+    .case{
+        width:100%;
+        padding: 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1px solid white;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        }
+        
+    .intro{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            i{
+                font-size:40px ;
+            }
+
+            .left{
+                display: flex;
+                font-size:26px ;
+            }
+            .right{
+                display: flex;
+                float: right;
+                font-size:26px ;
+            }
+            
+        }
+
+        .content{
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color: rebeccapurple;
+        }
+
+        .footer{
+            height: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            a{
+                transition: .5s;
+                width: 100px;
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid white;
+                border-radius: 10px;
+            }
+
+            a:hover{
+                color: gray;
+                background-color: white;
+            }
+        }
+
+    }
+
+    .about-me{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            i{
+                font-size:40px ;
+            }
+
+            .left{
+                display: flex;
+                font-size:26px ;
+            }
+            
+            
+        }
+
+        .content{
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color: rebeccapurple;
+        }
+
+        .info-case{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            border-bottom: 1px solid white;
+            i{
+                font-size: 40px;
+            }
+        }
+
+        
+    }
+
+    .skills{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            i{
+                font-size:40px ;
+            }
+
+            .left{
+                display: flex;
+                font-size:26px ;
+            }
+        }
+        .content{
+            font-size: 24px;
+        }
+    }
+
+    .projects{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            i{
+                font-size:40px ;
+            }
+
+            .left{
+                display: flex;
+                font-size:26px ;
+            }
+            
+        }
+
+        .info-case{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            border-bottom: 1px solid white;
+            i{
+                font-size: 40px;
+            }
+        }
+    }
+
+    .contact{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            i{
+                font-size:40px ;
+            }
+
+            .left{
+                display: flex;
+                font-size:26px ;
+            }
+            
+        }
+    }
     
 }
 
@@ -69,3 +291,4 @@ html {
 @media (max-width: 400px) {
 
 }
+
