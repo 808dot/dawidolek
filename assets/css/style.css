@@ -175,6 +175,7 @@ html {
   font-size: 26px;
 }
 .hero .projects .info-case {
+  transition: 0.5s;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -183,6 +184,12 @@ html {
 }
 .hero .projects .info-case i {
   font-size: 40px;
+}
+.hero .projects .info-case .description {
+  visibility: hidden;
+}
+.hero .projects .info-case:hover .description {
+  visibility: visible;
 }
 .hero .contact {
   width: 100%;

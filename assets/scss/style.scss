@@ -224,6 +224,7 @@ html {
         }
 
         .info-case{
+            transition: .5s;
             height: 50px;
             display: flex;
             justify-content: space-between;
@@ -232,6 +233,17 @@ html {
             i{
                 font-size: 40px;
             }
+
+            .description{
+                visibility: hidden;
+            }
+
+            
+        }
+
+        .info-case:hover .description{
+            visibility: visible;
+            // background-color: red;
         }
     }
 
