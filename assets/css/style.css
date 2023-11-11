@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Pixel-Art;
+  src: url(../font/pixelart.ttf);
+}
+@font-face {
+  font-family: VT323;
+  src: url(../font/VT323-Regular.ttf);
+}
 :root {
   --black: #030707ff;
 }
@@ -6,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Pixel-Art", sans-serif;
   list-style: none;
   text-decoration: none;
   color: white;
@@ -40,6 +49,11 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
+.hero h1 {
+  font-family: "VT323", monospace;
+  font-size: 45px;
+  margin-left: 8px;
+}
 .hero .case {
   width: 100%;
   padding: 12px;
@@ -58,10 +72,10 @@ html {
 .hero .intro .header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 40px;
 }
-.hero .intro .header i {
-  font-size: 40px;
+.hero .intro .header img {
+  width: 40px;
 }
 .hero .intro .header .left {
   display: flex;
@@ -70,13 +84,17 @@ html {
 .hero .intro .header .right {
   display: flex;
   float: right;
-  font-size: 26px;
+  font-size: 40px;
 }
 .hero .intro .content {
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hero .intro .content p {
+  font-family: "VT323", monospace;
+  font-size: 20px;
 }
 .hero .intro .footer {
   height: 80px;
@@ -93,6 +111,8 @@ html {
   align-items: center;
   border: 1px solid white;
   border-radius: 10px;
+  font-family: "VT323", monospace;
+  font-size: 24px;
 }
 .hero .intro .footer a:hover {
   color: gray;
@@ -103,12 +123,12 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .hero .about-me .header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 40px;
 }
 .hero .about-me .header i {
   font-size: 40px;
@@ -123,15 +143,51 @@ html {
   justify-content: center;
   align-items: center;
 }
+.hero .about-me .content p {
+  font-family: "VT323", monospace;
+  font-size: 20px;
+}
 .hero .about-me .info-case {
-  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s linear;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   font-size: 24px;
   border-bottom: 1px solid white;
+  background-color: transparent;
 }
-.hero .about-me .info-case i {
+.hero .about-me .info-case .left {
+  transition: 0.3s;
+  display: flex;
+}
+.hero .about-me .info-case .left img {
+  transition: 0.3s;
+  width: 40px;
+}
+.hero .about-me .info-case .left p {
+  margin-left: 8px;
+  transition: 0.3s;
   font-size: 40px;
+  font-family: "VT323", monospace;
+}
+.hero .about-me .info-case .description {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s, display 0.5s;
+  font-size: 20px;
+  font-family: "VT323", monospace;
+}
+.hero .about-me .info-case:hover {
+  flex-direction: column;
+  transition: all 0.3s linear;
+  height: 100px;
+}
+.hero .about-me .info-case:hover .description {
+  opacity: 1;
+  display: block;
+  transition: opacity 0.5s, display 0.5s;
 }
 .hero .skills {
   width: 100%;
@@ -143,7 +199,7 @@ html {
 .hero .skills .header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 40px;
 }
 .hero .skills .header i {
   font-size: 40px;
@@ -153,7 +209,32 @@ html {
   font-size: 26px;
 }
 .hero .skills .content {
-  font-size: 24px;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero .skills .content .box {
+  display: flex;
+  font-family: "VT323", monospace;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.hero .skills .content .box .icon-box {
+  display: flex;
+  font-family: "VT323", monospace;
+}
+.hero .skills .content .box .icon-box img {
+  width: 28px;
+}
+.hero .skills .content .box .icon-box p {
+  margin-left: 4px;
+}
+.hero .skills .content p {
+  font-family: "VT323", monospace;
+}
+.hero .skills .content i {
+  font-family: "VT323", monospace;
 }
 .hero .projects {
   width: 100%;
@@ -165,7 +246,7 @@ html {
 .hero .projects .header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 40px;
 }
 .hero .projects .header i {
   font-size: 40px;
@@ -175,21 +256,46 @@ html {
   font-size: 26px;
 }
 .hero .projects .info-case {
-  transition: 0.5s;
-  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s linear;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   font-size: 24px;
   border-bottom: 1px solid white;
+  background-color: transparent;
 }
-.hero .projects .info-case i {
-  font-size: 40px;
+.hero .projects .info-case .left {
+  transition: 0.3s;
+  display: flex;
+}
+.hero .projects .info-case .left img {
+  transition: 0.3s;
+  width: 40px;
+}
+.hero .projects .info-case .left p {
+  transition: 0.3s;
+  font-size: 32px;
+  font-family: "VT323", monospace;
+  margin-left: 8px;
 }
 .hero .projects .info-case .description {
-  visibility: hidden;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s, display 0.5s;
+  font-size: 20px;
+  font-family: "VT323", monospace;
+}
+.hero .projects .info-case:hover {
+  flex-direction: column;
+  transition: all 0.3s linear;
+  height: 90px;
 }
 .hero .projects .info-case:hover .description {
-  visibility: visible;
+  opacity: 1;
+  display: block;
+  transition: opacity 0.5s, display 0.5s;
 }
 .hero .contact {
   width: 100%;
@@ -201,7 +307,7 @@ html {
 .hero .contact .header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 40px;
 }
 .hero .contact .header i {
   font-size: 40px;
