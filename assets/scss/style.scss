@@ -5,8 +5,8 @@
   }
 
 @font-face {
-font-family: VT323;
-src: url(../font/VT323-Regular.ttf);
+    font-family: VT323;
+    src: url(../font/VT323-Regular.ttf);
 }
 
 :root{
@@ -28,7 +28,8 @@ src: url(../font/VT323-Regular.ttf);
     // font-family: 'Roboto', sans-serif;
     // font-family: 'Roboto Slab', serif;
     // font-family: 'Source Code Pro', monospace; 
-    font-family: 'Pixel-Art', sans-serif;
+    // font-family: 'Pixel-Art', sans-serif;
+    font-family: 'VT323', monospace;
     list-style: none;
     text-decoration: none;
     color: white;
@@ -54,14 +55,10 @@ html {
     background-position: center center;  
     position: fixed;
     z-index: -1;
-
-    // background-repeat: no-repeat;
 }
 
 .hero{
     width: 40%;
-    
-    // background-color: red;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -72,11 +69,8 @@ html {
     top:50%;
     left: 50%;
     transform:translateX(-50%);
-    // transform: translate(-50%, -50%);
-    // -webkit-transform: translate(-50%,-50%);
 
     h1{
-        font-family: 'VT323', monospace;
         font-size: 45px;
         margin-left: 8px;
     }
@@ -85,74 +79,108 @@ html {
         width:100%;
         padding: 12px;
         background-color: rgba(0, 0, 0, 0.5);
-        border: 1px solid white;
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
+        border: 1px solid white;
+    }
+
+    .header{
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 40px ;
         }
-        
+        .left{
+            display: flex;
+            font-size:26px ;
+        }
+        .right{
+            display: flex;
+            float: right;
+            font-size: 40px ;
+        }
+    }
+
+    .content{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-family: 'VT323', monospace;
+            font-size: 20px;
+        }
+    }
+
     .intro{
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        .header{
-            display: flex;
-            justify-content: space-between;
-            height: 40px;
-            img{
-                width: 40px ;
-            }
-
-            .left{
-                display: flex;
-                font-size:26px ;
-            }
-            .right{
-                display: flex;
-                float: right;
-                font-size: 40px ;
-            }
-            
-        }
-
-        .content{
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // background-color: rebeccapurple;
-            p{
-                font-family: 'VT323', monospace;
-                font-size: 20px;
-            }
-        }
-
         .footer{
             height: 80px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             a{
-                transition: .5s;
                 width: 100px;
                 height: 35px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid white;
-                border-radius: 10px;
                 font-family: 'VT323', monospace;
                 font-size: 24px;
+                border: 1px solid white;
+                border-radius: 10px;
+                transition: .5s;
             }
-
             a:hover{
                 color: gray;
                 background-color: white;
             }
         }
+    }
 
+    .info-case{
+        max-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        font-size: 24px;
+        border-bottom: 1px solid white;
+        padding-top: 10px;
+        padding-bottom: 10px ;
+        transition: 0.9s ;
+        .left{
+            display: flex;
+            transition: .5s;
+            img{
+                width: 40px;
+                transition: .5s;
+            }
+            p{
+                margin-left: 8px;
+                font-family: 'VT323', monospace;
+                font-size: 40px; 
+                transition: .5s;
+            }
+        }
+        .description{
+            opacity: 0;
+            overflow: hidden;
+            font-family: 'VT323', monospace;
+            font-size: 20px; 
+            transition: 0.7s ;
+        }
+    }
+
+    .info-case:hover{
+        max-height: 200px;
+    }
+    .info-case:hover .description{
+        opacity: 1;
     }
 
     .about-me{
@@ -161,93 +189,6 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-
-        .header{
-            display: flex;
-            justify-content: space-between;
-            height: 40px;
-            i{
-                font-size:40px ;
-            }
-
-            .left{
-                display: flex;
-                font-size:26px ;
-            }
-            
-            
-            
-        }
-
-        .content{
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            p{
-                font-family: 'VT323', monospace;
-                font-size: 20px;
-            }
-        }
-
-        .info-case{
-            padding-top: 10px;
-            padding-bottom: 10px ;
-            transition: all .3s linear;
-            height: 60px;
-            display: flex;
-            justify-content: space-between;
-            // align-items: center;
-            font-size: 24px;
-            border-bottom: 1px solid white;
-            background-color: transparent;
-
-            .left{
-                transition: .3s;
-                display: flex;
-                // background-color: rebeccapurple;
-                img{
-                    transition: .3s;
-                    width: 40px;
-                }
-                p{
-                    margin-left: 8px;
-                    transition: .3s;
-                    font-size: 40px; 
-                    font-family: 'VT323', monospace;
-                }
-            }
-            
-
-            .description{
-                
-                opacity: 0;
-                display: none;
-                transition: opacity 0.5s, display 0.5s;
-                font-size: 20px; 
-                font-family: 'VT323', monospace;
-            }
-
-            
-        }
-        .info-case:hover{
-            flex-direction: column;
-            transition: all .3s linear;
-            height: 100px;
-        }
-
-    
-        .info-case:hover .description{
-            
-            opacity: 1;
-            display: block;
-            transition: opacity 0.5s, display 0.5s;
-            // -webkit-animation: fadeIn 1s;
-            // animation: fadeIn 1s;
-            // transition: all .3s linear;
-            // background-color: red;
-        }
-        
     }
 
     .skills{
@@ -257,52 +198,25 @@ html {
         flex-direction: column;
         justify-content: space-between;
 
-        .header{
-            display: flex;
-            justify-content: space-between;
-            height: 40px;
-            i{
-                font-size:40px ;
-            }
-
-            .left{
-                display: flex;
-                font-size:26px ;
-            }
-        }
-        .content{
-            font-size: 28px;
+        .skill-content{
             display: flex;
             flex-direction: column;
             gap: 10px;
+            font-size: 28px;
             .box{
                 display: flex;
-                font-family: 'VT323', monospace;
-                gap: 10px;
                 flex-wrap: wrap;
+                gap: 10px;
                 .icon-box{
                     display: flex;
-                    font-family: 'VT323', monospace;
                     img{
-                    width: 28px;
+                        width: 28px;
                     }
                     p{
                         margin-left: 4px;
                     }
                 }
             }
-
-            
-            
-            p{
-                font-family: 'VT323', monospace;
-                
-            }
-
-            i{
-                font-family: 'VT323', monospace;
-            }
-            
         }
     }
 
@@ -312,79 +226,6 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        .header{
-            display: flex;
-            justify-content: space-between;
-            height: 40px;
-            i{
-                font-size:40px ;
-            }
-
-            .left{
-                display: flex;
-                font-size:26px ;
-            }
-            
-        }
-
-        .info-case{
-            padding-top: 10px;
-            padding-bottom: 10px ;
-            transition: all .3s linear;
-            height: 60px;
-            display: flex;
-            justify-content: space-between;
-            // align-items: center;
-            font-size: 24px;
-            border-bottom: 1px solid white;
-            background-color: transparent;
-
-            .left{
-                transition: .3s;
-                display: flex;
-                // background-color: rebeccapurple;
-                img{
-                    transition: .3s;
-                    width: 40px;
-                }
-                p{
-                    transition: .3s;
-                    font-size: 32px; 
-                    font-family: 'VT323', monospace;
-                    margin-left: 8px;
-                }
-            }
-            
-
-            .description{
-                
-                opacity: 0;
-                display: none;
-                transition: opacity 0.5s, display 0.5s;
-                font-size: 20px; 
-                font-family: 'VT323', monospace;
-            }
-
-            
-        }
-        .info-case:hover{
-            flex-direction: column;
-            transition: all .3s linear;
-            height: 90px;
-        }
-
-    
-        .info-case:hover .description{
-            
-            opacity: 1;
-            display: block;
-            transition: opacity 0.5s, display 0.5s;
-            // -webkit-animation: fadeIn 1s;
-            // animation: fadeIn 1s;
-            // transition: all .3s linear;
-            // background-color: red;
-        }
     }
 
     .contact{
@@ -393,21 +234,6 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        .header{
-            display: flex;
-            justify-content: space-between;
-            height: 40px;
-            i{
-                font-size:40px ;
-            }
-
-            .left{
-                display: flex;
-                font-size:26px ;
-            }
-            
-        }
     }
     
 }
