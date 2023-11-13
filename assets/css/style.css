@@ -44,10 +44,9 @@ html {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40vh;
 }
 .hero h1 {
   font-size: 45px;
@@ -55,6 +54,11 @@ html {
 }
 .hero .case {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
   padding: 12px;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(5px);
@@ -88,20 +92,20 @@ html {
   font-family: "VT323", monospace;
   font-size: 20px;
 }
-.hero .intro {
+.hero #intro {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.hero .intro .footer {
+.hero #intro .footer {
   height: 80px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.hero .intro .footer a {
+.hero #intro .footer a {
   width: 100px;
   height: 35px;
   display: flex;
@@ -113,7 +117,7 @@ html {
   border-radius: 10px;
   transition: 0.5s;
 }
-.hero .intro .footer a:hover {
+.hero #intro .footer a:hover {
   color: gray;
   background-color: white;
 }
@@ -142,7 +146,26 @@ html {
   font-size: 40px;
   transition: 0.5s;
 }
+.hero .info-case .left2 {
+  display: flex;
+  transition: 0.5s;
+}
+.hero .info-case .left2 img {
+  width: 20px;
+  height: 20px;
+  transition: 0.5s;
+}
+.hero .info-case .left2 p {
+  margin-left: 8px;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  transition: 0.5s;
+}
 .hero .info-case .description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
   opacity: 0;
   overflow: hidden;
   font-family: "VT323", monospace;
@@ -150,56 +173,71 @@ html {
   transition: 0.7s;
 }
 .hero .info-case:hover {
-  max-height: 200px;
+  max-height: 250px;
 }
 .hero .info-case:hover .description {
   opacity: 1;
 }
-.hero .about-me {
+.hero #about-me {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.hero .skills {
+.hero #skills {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.hero .skills .skill-content {
+.hero #skills .skill-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-size: 28px;
 }
-.hero .skills .skill-content .box {
+.hero #skills .skill-content .box {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-.hero .skills .skill-content .box .icon-box {
+.hero #skills .skill-content .box .icon-box {
   display: flex;
 }
-.hero .skills .skill-content .box .icon-box img {
+.hero #skills .skill-content .box .icon-box img {
   width: 28px;
 }
-.hero .skills .skill-content .box .icon-box p {
+.hero #skills .skill-content .box .icon-box p {
   margin-left: 4px;
 }
-.hero .projects {
+.hero #projects {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.hero .contact {
-  width: 100%;
-  height: 100%;
+.hero #contact .contact-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 10px;
+  font-size: 28px;
+}
+.hero #contact .contact-content .icon-box {
+  display: flex;
+}
+.hero #contact .contact-content .icon-box img {
+  width: 28px;
+}
+.hero #contact .contact-content .icon-box p {
+  margin-left: 4px;
+}
+
+.footer1 {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
