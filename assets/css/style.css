@@ -185,6 +185,26 @@ html {
   flex-direction: column;
   justify-content: space-around;
 }
+.hero #about-me .hobby-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 22px;
+}
+.hero #about-me .hobby-content .box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero #about-me .hobby-content .box .icon-box {
+  display: flex;
+}
+.hero #about-me .hobby-content .box .icon-box img {
+  width: 24px;
+}
+.hero #about-me .hobby-content .box .icon-box p {
+  margin-left: 4px;
+}
 .hero #skills {
   width: 100%;
   height: 100%;

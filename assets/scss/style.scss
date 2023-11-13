@@ -219,6 +219,27 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        .hobby-content{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 22px;
+            .box{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                .icon-box{
+                    display: flex;
+                    img{
+                        width: 24px;
+                    }
+                    p{
+                        margin-left: 4px;
+                    }
+                }
+            }
+        }
     }
 
     #skills{
