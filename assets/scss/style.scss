@@ -11,6 +11,15 @@
 
 :root{
     --black: #030707ff;
+    --font-header:45px;
+    --img-header: 40px;
+    --font-content: 20px;
+    --font-info-case: 40px;
+    --font-info-case2: 20px;
+    --font-hobby:22px;
+    --font-skills:28px;
+    --font-contact:28px;
+    --font-link:24px;
 }
 
 * {
@@ -74,7 +83,7 @@ html {
     // transform:translateX(-50%);
 
     h1{
-        font-size: 45px;
+        font-size: var(--font-header);
         margin-left: 8px;
     }
     
@@ -93,20 +102,20 @@ html {
     }
 
     .header{
-        height: 40px;
+        height: var(--img-header);
         display: flex;
         justify-content: space-between;
         img{
-            width: 40px ;
+            width: var(--img-header); 
         }
         .left{
             display: flex;
-            font-size:26px ;
+            // font-size:26px ;
         }
         .right{
             display: flex;
             float: right;
-            font-size: 40px ;
+            font-size: var(--img-header);
         }
     }
 
@@ -117,7 +126,7 @@ html {
         align-items: center;
         p{
             font-family: 'VT323', monospace;
-            font-size: 20px;
+            font-size: var(--font-content);
         }
     }
 
@@ -133,13 +142,14 @@ html {
             justify-content: space-evenly;
             align-items: center;
             a{
-                width: 100px;
-                height: 35px;
+                width: auto;
+                height: auto;
+                padding: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 font-family: 'VT323', monospace;
-                font-size: 24px;
+                font-size: var(--font-link);
                 border: 1px solid white;
                 border-radius: 10px;
                 transition: .5s;
@@ -156,7 +166,6 @@ html {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        font-size: 24px;
         border-bottom: 1px solid white;
         padding-top: 10px;
         padding-bottom: 10px ;
@@ -165,13 +174,13 @@ html {
             display: flex;
             transition: .5s;
             img{
-                width: 40px;
+                width: var(--font-info-case);
                 transition: .5s;
             }
             p{
                 margin-left: 8px;
                 font-family: 'VT323', monospace;
-                font-size: 40px; 
+                font-size: var(--font-info-case); 
                 transition: .5s;
             }
         }
@@ -180,14 +189,14 @@ html {
             display: flex;
             transition: .5s;
             img{
-                width: 20px;
-                height: 20px;
+                width: var(--font-info-case2);
+                height: var(--font-info-case2);
                 transition: .5s;
             }
             p{
                 margin-left: 8px;
                 font-family: 'VT323', monospace;
-                font-size: 20px; 
+                font-size: var(--font-info-case2); 
                 transition: .5s;
             }
         }
@@ -200,13 +209,13 @@ html {
             opacity: 0;
             overflow: hidden;
             font-family: 'VT323', monospace;
-            font-size: 20px; 
+            font-size: var(--font-info-case2); 
             transition: 0.7s ;
         }
     }
 
     .info-case:hover{
-        max-height: 250px;
+        max-height: 500px;
     }
 
     .info-case:hover .description{
@@ -224,7 +233,7 @@ html {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            font-size: 22px;
+            font-size: var(--font-hobby);
             .box{
                 display: flex;
                 flex-wrap: wrap;
@@ -232,7 +241,7 @@ html {
                 .icon-box{
                     display: flex;
                     img{
-                        width: 24px;
+                        width: var(--font-hobby);
                     }
                     p{
                         margin-left: 4px;
@@ -253,7 +262,7 @@ html {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            font-size: 28px;
+            font-size: var(--font-skills);
             .box{
                 display: flex;
                 flex-wrap: wrap;
@@ -261,7 +270,7 @@ html {
                 .icon-box{
                     display: flex;
                     img{
-                        width: 28px;
+                        width: var(--font-skills);
                     }
                     p{
                         margin-left: 4px;
@@ -285,12 +294,12 @@ html {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            font-size: 28px;
+            font-size: var(--font-contact);
             
             .icon-box{
                 display: flex;
                 img{
-                    width: 28px;
+                    width: var(--font-contact);
                 }
                 p{
                     margin-left: 4px;
@@ -311,33 +320,88 @@ html {
 
 @media (max-width: 1440px){
     
-}
-
-@media (max-width: 1200px){
-
-}
-
-@media (max-width: 1024px) {
     
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px){
+    :root{
+        --black: #030707ff;
+        --font-header:40px;
+        --img-header: 35px;
+        --font-info-case: 35px;
+    }
+    
+}
 
+@media (max-width: 1024px) {
+    :root{
+        --black: #030707ff;
+        --font-header:35px;
+        --img-header: 30px;
+        --font-content: 20px;
+        --font-info-case: 30px;
+        --font-info-case2: 20px;
+        --font-hobby:22px;
+        --font-skills:25px;
+        --font-contact:25px;
+        --font-link:20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero{
+        width:50%;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero{
+        width:60%;
+    }
     
 }
 
 @media (max-width: 600px) {
+    .hero{
+        width:70%;
+    }
  
 }
 
 @media (max-width: 480px) {
+    :root{
+        --black: #030707ff;
+        --font-header:30px;
+        --img-header: 25px;
+        --font-content: 17px;
+        --font-info-case: 25px;
+        --font-info-case2: 17px;
+        --font-hobby:20px;
+        --font-skills:20px;
+        --font-contact:20px;
+        --font-link:15px;
+    }
     
 }
 
 @media (max-width: 400px) {
+    :root{
+        --black: #030707ff;
+        --font-header:30px;
+        --img-header: 25px;
+        --font-content: 15px;
+        --font-info-case: 20px;
+        --font-info-case2: 17px;
+        --font-hobby:17px;
+        --font-skills:17px;
+        --font-contact:15px;
+        --font-link:12px;
+    }
 
+    .hero{
+        .info-case{
+            max-height: 40px;
+        }
+    }
 }
 
