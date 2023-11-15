@@ -39,7 +39,7 @@ InfoCases.forEach((InfoCase, index) => {
           // highlight the mouseover target
           console.log(ProjectsWidth);
           InfoCase.style.setProperty('align-items', 'start');
-          ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
+        //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
           ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
           ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
        
@@ -53,7 +53,7 @@ InfoCases.forEach((InfoCase, index) => {
     InfoCase.addEventListener("mouseout", (event) => {
           // highlight the mouseover target
           console.log(index);
-          ProjectsIcons[index].style.removeProperty('width');
+        //   ProjectsIcons[index].style.removeProperty('width');
           ProjectsIcons[index].style.removeProperty('height');
           ProjectsTitle[index].style.removeProperty('font-size');
         

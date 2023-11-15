@@ -131,7 +131,7 @@ html {
   background-color: white;
 }
 .hero .info-case {
-  height: 60px;
+  max-height: 60px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -145,7 +145,7 @@ html {
   transition: 0.5s;
 }
 .hero .info-case .header-info img {
-  width: var(--font-info-case);
+  width: auto;
   height: var(--font-info-case);
   transition: 0.5s;
 }
