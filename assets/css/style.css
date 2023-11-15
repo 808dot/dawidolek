@@ -337,4 +337,21 @@ html {
   .hero .info-case {
     max-height: 40px;
   }
+}
+@media (max-width: 370px) {
+  :root {
+    --black: #030707ff;
+    --font-header:30px;
+    --img-header: 25px;
+    --font-content: 15px;
+    --font-info-case: 18px;
+    --font-info-case2: 13px;
+    --font-hobby:17px;
+    --font-skills:17px;
+    --font-contact:15px;
+    --font-link:10px;
+  }
+  .hero .info-case {
+    max-height: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
