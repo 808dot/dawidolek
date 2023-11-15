@@ -143,6 +143,7 @@ html {
 .hero .info-case .left {
   display: flex;
   transition: 0.5s;
+  height: var(--font-info-case);
 }
 .hero .info-case .left img {
   width: var(--font-info-case);

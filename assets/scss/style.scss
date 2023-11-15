@@ -173,6 +173,8 @@ html {
         .left{
             display: flex;
             transition: .5s;
+            // background-color: aqua;
+            height: var(--font-info-case);
             img{
                 width: var(--font-info-case);
                 height: var(--font-info-case);
