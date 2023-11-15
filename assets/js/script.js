@@ -41,7 +41,7 @@ InfoCases.forEach((InfoCase, index) => {
           InfoCase.style.setProperty('align-items', 'start');
         //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
           ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
-          ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
+        //   ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
        
         },
         false,
@@ -55,7 +55,7 @@ InfoCases.forEach((InfoCase, index) => {
           console.log(index);
         //   ProjectsIcons[index].style.removeProperty('width');
           ProjectsIcons[index].style.removeProperty('height');
-          ProjectsTitle[index].style.removeProperty('font-size');
+        //   ProjectsTitle[index].style.removeProperty('font-size');
         
         },
         false,
