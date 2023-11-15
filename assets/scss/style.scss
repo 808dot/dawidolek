@@ -76,11 +76,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     padding-top: 40vh;
-    // margin-top: ;
-    // position: absolute;
-    // top:50%;
-    // left: 50%;
-    // transform:translateX(-50%);
+   
 
     h1{
         font-size: var(--font-header);
@@ -170,11 +166,9 @@ html {
         padding-top: 10px;
         padding-bottom: 10px ;
         transition: 0.9s ;
-        .left{
+        .header-info{
             display: flex;
             transition: .5s;
-            // background-color: aqua;
-            height: var(--font-info-case);
             img{
                 width: var(--font-info-case);
                 height: var(--font-info-case);
@@ -189,7 +183,7 @@ html {
             }
         }
 
-        .left2{
+        .description-info{
             display: flex;
             transition: .5s;
             img{

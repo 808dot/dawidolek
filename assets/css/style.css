@@ -140,32 +140,31 @@ html {
   padding-bottom: 10px;
   transition: 0.9s;
 }
-.hero .info-case .left {
+.hero .info-case .header-info {
   display: flex;
   transition: 0.5s;
-  height: var(--font-info-case);
 }
-.hero .info-case .left img {
+.hero .info-case .header-info img {
   width: var(--font-info-case);
   height: var(--font-info-case);
   transition: 0.5s;
 }
-.hero .info-case .left p {
+.hero .info-case .header-info p {
   margin-left: 8px;
   font-family: "VT323", monospace;
   font-size: var(--font-info-case);
   transition: 0.5s;
 }
-.hero .info-case .left2 {
+.hero .info-case .description-info {
   display: flex;
   transition: 0.5s;
 }
-.hero .info-case .left2 img {
+.hero .info-case .description-info img {
   width: var(--font-info-case2);
   height: var(--font-info-case2);
   transition: 0.5s;
 }
-.hero .info-case .left2 p {
+.hero .info-case .description-info p {
   margin-left: 8px;
   font-family: "VT323", monospace;
   font-size: var(--font-info-case2);

@@ -1,7 +1,7 @@
 let Arrows = document.querySelectorAll(".info-case i");
 let InfoCases = document.querySelectorAll(".info-case");
-let ProjectsIcons = document.querySelectorAll(".info-case .left img");
-let ProjectsTitle = document.querySelectorAll(".info-case .left p");
+let ProjectsIcons = document.querySelectorAll(".info-case .header-info img");
+let ProjectsTitle = document.querySelectorAll(".info-case .header-info p");
 
 let ScreenWidth = screen.width;
 let ProjectsWidth = '28px'
