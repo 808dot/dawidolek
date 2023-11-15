@@ -125,7 +125,6 @@ html {
   border: 1px solid white;
   border-radius: 10px;
   transition: 0.5s;
-  -webkit-transition: 0.5s;
 }
 .hero #intro .footer a:hover {
   color: gray;
@@ -140,42 +139,36 @@ html {
   padding-top: 10px;
   padding-bottom: 10px;
   transition: 0.9s;
-  -webkit-transition: 0 0.9s;
 }
 .hero .info-case .left {
   display: flex;
   transition: 0.5s;
-  -webkit-transition: 0.5s;
 }
 .hero .info-case .left img {
   width: var(--font-info-case);
+  height: var(--font-info-case);
   transition: 0.5s;
-  -webkit-transition: 0.5s;
 }
 .hero .info-case .left p {
   margin-left: 8px;
   font-family: "VT323", monospace;
   font-size: var(--font-info-case);
   transition: 0.5s;
-  -webkit-transition: 0.5s;
 }
 .hero .info-case .left2 {
   display: flex;
   transition: 0.5s;
-  -webkit-transition: 0.5s;
 }
 .hero .info-case .left2 img {
   width: var(--font-info-case2);
   height: var(--font-info-case2);
   transition: 0.5s;
-  -webkit-transition: 0.5s;
 }
 .hero .info-case .left2 p {
   margin-left: 8px;
   font-family: "VT323", monospace;
   font-size: var(--font-info-case2);
   transition: 0.5s;
-  -webkit-transition: 0.5s;
 }
 .hero .info-case .description {
   display: flex;
@@ -187,7 +180,6 @@ html {
   font-family: "VT323", monospace;
   font-size: var(--font-info-case2);
   transition: 0.7s;
-  -webkit-transition: 0.7s;
 }
 .hero .info-case:hover {
   max-height: 500px;

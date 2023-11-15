@@ -153,7 +153,6 @@ html {
                 border: 1px solid white;
                 border-radius: 10px;
                 transition: .5s;
-                -webkit-transition: .5s;
             }
             a:hover{
                 color: gray;
@@ -171,44 +170,36 @@ html {
         padding-top: 10px;
         padding-bottom: 10px ;
         transition: 0.9s ;
-        -webkit-transition: .0.9s;
-
         .left{
             display: flex;
             transition: .5s;
-            -webkit-transition: .5s;
             img{
                 width: var(--font-info-case);
+                height: var(--font-info-case);
+
                 transition: .5s;
-                -webkit-transition: .5s;
             }
             p{
                 margin-left: 8px;
                 font-family: 'VT323', monospace;
                 font-size: var(--font-info-case); 
                 transition: .5s;
-                -webkit-transition: .5s;
             }
         }
 
         .left2{
             display: flex;
             transition: .5s;
-            -webkit-transition: .5s;
             img{
                 width: var(--font-info-case2);
                 height: var(--font-info-case2);
                 transition: .5s;
-                -webkit-transition: .5s;
-
             }
             p{
                 margin-left: 8px;
                 font-family: 'VT323', monospace;
                 font-size: var(--font-info-case2); 
                 transition: .5s;
-                -webkit-transition: .5s;
-
             }
         }
 
@@ -222,8 +213,6 @@ html {
             font-family: 'VT323', monospace;
             font-size: var(--font-info-case2); 
             transition: 0.7s ;
-            -webkit-transition: 0.7s;
-
         }
     }
 

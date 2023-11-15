@@ -31,13 +31,16 @@ else if (ScreenWidth <= 370) {
 // });
   
 
+// Hover info-case
+
 InfoCases.forEach((InfoCase, index) => {
     // console.log(InfoCase)
-    InfoCase.addEventListener("click", (event) => {
+    InfoCase.addEventListener("mouseover", (event) => {
           // highlight the mouseover target
           console.log(ProjectsWidth);
           InfoCase.style.setProperty('align-items', 'start');
           ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
+          ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
           ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
        
         },
@@ -45,32 +48,17 @@ InfoCases.forEach((InfoCase, index) => {
       );
 });
 
-// Hover info-case
-
-// InfoCases.forEach((InfoCase, index) => {
-//     // console.log(InfoCase)
-//     InfoCase.addEventListener("mouseover", (event) => {
-//           // highlight the mouseover target
-//           console.log(ProjectsWidth);
-//           InfoCase.style.setProperty('align-items', 'start');
-//           ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
-//           ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
-       
-//         },
-//         false,
-//       );
-// });
-
-// InfoCases.forEach((InfoCase, index) => {
-//     // console.log(InfoCase)
-//     InfoCase.addEventListener("mouseout", (event) => {
-//           // highlight the mouseover target
-//           console.log(index);
-//           ProjectsIcons[index].style.removeProperty('width');
-//           ProjectsTitle[index].style.removeProperty('font-size');
+InfoCases.forEach((InfoCase, index) => {
+    // console.log(InfoCase)
+    InfoCase.addEventListener("mouseout", (event) => {
+          // highlight the mouseover target
+          console.log(index);
+          ProjectsIcons[index].style.removeProperty('width');
+          ProjectsIcons[index].style.removeProperty('height');
+          ProjectsTitle[index].style.removeProperty('font-size');
         
-//         },
-//         false,
-//       );
-// });
+        },
+        false,
+      );
+});
 
