@@ -153,6 +153,13 @@ html {
   padding-bottom: 10px;
   transition: 0.9s;
 }
+.hero .info-case a {
+  position: fixed;
+  background-color: red;
+  height: var(--font-info-case);
+  width: var(--font-info-case);
+  z-index: 20;
+}
 .hero .info-case .header-info {
   display: flex;
   transition: 0.5s;

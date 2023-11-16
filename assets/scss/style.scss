@@ -191,6 +191,13 @@ html {
         padding-top: 10px;
         padding-bottom: 10px ;
         transition: 0.9s ;
+        a{
+            position: fixed;
+            background-color: red;
+            height: var(--font-info-case);
+            width: var(--font-info-case);
+            z-index: 20;
+        }
         .header-info{
             display: flex;
             transition: .5s;

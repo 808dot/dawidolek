@@ -2,6 +2,7 @@ let Arrows = document.querySelectorAll(".info-case i");
 let InfoCases = document.querySelectorAll(".info-case");
 let ProjectsIcons = document.querySelectorAll(".info-case .header-info img");
 let ProjectsTitle = document.querySelectorAll(".info-case .header-info p");
+let ProjectsLink = document.querySelectorAll(".info-case .header-info a");
 
 let ScreenWidth = screen.width;
 let ProjectsWidth = '28px'
@@ -19,7 +20,7 @@ else if (ScreenWidth <= 370) {
 let bg = document.querySelectorAll(".background img");
 let hero = document.getElementsByClassName('hero')
 window.addEventListener('scroll', () => {
-    console.log(100  + window.scrollY / 100 + '%');
+    // console.log(100  + window.scrollY / 100 + '%');
     bg[0].style.width = 100  + window.scrollY / 70 + '%';
     bg[0].style.height = 100  + window.scrollY / 70 + '%';
 
@@ -58,6 +59,8 @@ InfoCases.forEach((InfoCase, index) => {
           InfoCase.style.setProperty('align-items', 'start');
         //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
           ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
+          ProjectsLink[index-3].style.setProperty('height', ProjectsWidth);
+          ProjectsLink[index-3].style.setProperty('width', ProjectsWidth);
         //   ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
        
         },
@@ -72,6 +75,8 @@ InfoCases.forEach((InfoCase, index) => {
         //   console.log(index);
         //   ProjectsIcons[index].style.removeProperty('width');
           ProjectsIcons[index].style.removeProperty('height');
+          ProjectsLink[index-3].style.removeProperty('height');
+          ProjectsLink[index-3].style.removeProperty('width');
         //   ProjectsTitle[index].style.removeProperty('font-size');
         
         },
