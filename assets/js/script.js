@@ -35,7 +35,44 @@ else if (ScreenWidth <= 370) {
 
     bg[1].style.top = 0  - window.scrollY / 50 + 'px';
     bg[1].style.left = 0  - window.scrollY / 50 + 'px';
-});
+
+
+
+
+    });
+
+    InfoCases.forEach((InfoCase, index) => {
+        // console.log(InfoCase)
+        InfoCase.addEventListener("mouseover", (event) => {
+            // highlight the mouseover target
+            //   console.log(ProjectsWidth);
+            InfoCase.style.setProperty('align-items', 'start');
+            //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
+            ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
+            ProjectsLink[index-3].style.setProperty('height', ProjectsWidth);
+            ProjectsLink[index-3].style.setProperty('width', '200px');
+            //   ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
+        
+            },
+            false,
+        );
+    });
+
+    InfoCases.forEach((InfoCase, index) => {
+        // console.log(InfoCase)
+        InfoCase.addEventListener("mouseout", (event) => {
+            // highlight the mouseover target
+            //   console.log(index);
+            //   ProjectsIcons[index].style.removeProperty('width');
+            ProjectsIcons[index].style.removeProperty('height');
+            ProjectsLink[index-3].style.removeProperty('height');
+            ProjectsLink[index-3].style.removeProperty('width');
+            //   ProjectsTitle[index].style.removeProperty('font-size');
+            
+            },
+            false,
+        );
+    });
 }
 
 // let bg = document.querySelectorAll(".background img");
@@ -68,40 +105,49 @@ else if (ScreenWidth <= 370) {
         
 //     });
 // });
-  
+let prevIndex = 0;
+let prevIndex2 = 0;
+InfoCases.forEach((InfoCase, index) => {
+    // console.log(InfoCase)
+    InfoCase.addEventListener("click", (event) => {
+          // highlight the mouseover target
+        //   console.log(ProjectsWidth);
+            ProjectsLink[prevIndex].style.removeProperty('height');
+            ProjectsLink[prevIndex].style.removeProperty('width');
+            ProjectsIcons[prevIndex2].style.removeProperty('height');
+            InfoCase.style.setProperty('align-items', 'start');
+        //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
+            ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
+            ProjectsLink[index-3].style.setProperty('height', ProjectsWidth);
+            ProjectsLink[index-3].style.setProperty('width', '200px');
+        //   ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
+
+            prevIndex = index-3;
+            prevIndex2 = index;
+        },
+        false,
+      );
+});
+
 
 // Hover info-case
 
-InfoCases.forEach((InfoCase, index) => {
-    // console.log(InfoCase)
-    InfoCase.addEventListener("mouseover", (event) => {
-          // highlight the mouseover target
-        //   console.log(ProjectsWidth);
-          InfoCase.style.setProperty('align-items', 'start');
-        //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
-          ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
-          ProjectsLink[index-3].style.setProperty('height', ProjectsWidth);
-          ProjectsLink[index-3].style.setProperty('width', ProjectsWidth);
-        //   ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
+// InfoCases.forEach((InfoCase, index) => {
+//     // console.log(InfoCase)
+//     InfoCase.addEventListener("mouseover", (event) => {
+//           // highlight the mouseover target
+//         //   console.log(ProjectsWidth);
+//           InfoCase.style.setProperty('align-items', 'start');
+//         //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
+//           ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
+//           ProjectsLink[index-3].style.setProperty('height', ProjectsWidth);
+//           ProjectsLink[index-3].style.setProperty('width', '200px');
+//         //   ProjectsTitle[index].style.setProperty('font-size', ProjectsWidth);
        
-        },
-        false,
-      );
-});
+//         },
+//         false,
+//       );
+// });
 
-InfoCases.forEach((InfoCase, index) => {
-    // console.log(InfoCase)
-    InfoCase.addEventListener("mouseout", (event) => {
-          // highlight the mouseover target
-        //   console.log(index);
-        //   ProjectsIcons[index].style.removeProperty('width');
-          ProjectsIcons[index].style.removeProperty('height');
-          ProjectsLink[index-3].style.removeProperty('height');
-          ProjectsLink[index-3].style.removeProperty('width');
-        //   ProjectsTitle[index].style.removeProperty('font-size');
-        
-        },
-        false,
-      );
-});
+
 
