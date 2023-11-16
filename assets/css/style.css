@@ -155,7 +155,6 @@ html {
 }
 .hero .info-case a {
   position: fixed;
-  background-color: red;
   height: var(--font-info-case);
   width: var(--font-info-case);
   z-index: 20;

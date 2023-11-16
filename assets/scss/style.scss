@@ -67,6 +67,7 @@ html {
         width: 100%;
         height: 100%;
         aspect-ratio: 16 / 9;
+        
         background-size:cover;                      
         background-repeat: no-repeat;
         background-position: center center;  
@@ -193,7 +194,7 @@ html {
         transition: 0.9s ;
         a{
             position: fixed;
-            background-color: red;
+            // background-color: red;
             height: var(--font-info-case);
             width: var(--font-info-case);
             z-index: 20;

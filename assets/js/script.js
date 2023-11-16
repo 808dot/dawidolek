@@ -3,23 +3,29 @@ let InfoCases = document.querySelectorAll(".info-case");
 let ProjectsIcons = document.querySelectorAll(".info-case .header-info img");
 let ProjectsTitle = document.querySelectorAll(".info-case .header-info p");
 let ProjectsLink = document.querySelectorAll(".info-case .header-info a");
+let bg = document.querySelectorAll(".background img");
 
 let ScreenWidth = screen.width;
 let ProjectsWidth = '28px'
 console.log(ScreenWidth);
 
 if (ScreenWidth <= 480 && ScreenWidth > 400) {
+    console.log(bg[0])
+    bg[0].src = 'assets/img/backgroundmobile.webp';
+    bg[1].src = 'assets/img/backgroundmobile.webp';
     ProjectsWidth = '20px'
 } else if (ScreenWidth <= 400 && ScreenWidth > 370) {
+    bg[0].src = 'assets/img/backgroundmobile.webp';
+    bg[1].src = 'assets/img/backgroundmobile.webp';
     ProjectsWidth = '15px'
 } 
 else if (ScreenWidth <= 370) {
+    bg[0].src = 'assets/img/backgroundmobile.webp';
+    bg[1].src = 'assets/img/backgroundmobile.webp';
     ProjectsWidth = '13px'
-} 
 
-let bg = document.querySelectorAll(".background img");
-let hero = document.getElementsByClassName('hero')
-window.addEventListener('scroll', () => {
+} else{
+    window.addEventListener('scroll', () => {
     // console.log(100  + window.scrollY / 100 + '%');
     bg[0].style.width = 100  + window.scrollY / 70 + '%';
     bg[0].style.height = 100  + window.scrollY / 70 + '%';
@@ -29,9 +35,24 @@ window.addEventListener('scroll', () => {
 
     bg[1].style.top = 0  - window.scrollY / 50 + 'px';
     bg[1].style.left = 0  - window.scrollY / 50 + 'px';
+});
+}
+
+// let bg = document.querySelectorAll(".background img");
+// let hero = document.getElementsByClassName('hero')
+// window.addEventListener('scroll', () => {
+//     // console.log(100  + window.scrollY / 100 + '%');
+//     bg[0].style.width = 100  + window.scrollY / 70 + '%';
+//     bg[0].style.height = 100  + window.scrollY / 70 + '%';
+
+//     bg[1].style.width = 100  + window.scrollY / 100 + '%';
+//     bg[1].style.height = 100  + window.scrollY / 100 + '%';
+
+//     bg[1].style.top = 0  - window.scrollY / 50 + 'px';
+//     bg[1].style.left = 0  - window.scrollY / 50 + 'px';
         
     
-});
+// });
 
 // Clicked arrow in ifno case make window bigger
 // Arrows.forEach((Arrow, index) => {
