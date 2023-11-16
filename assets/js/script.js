@@ -15,6 +15,23 @@ if (ScreenWidth <= 480 && ScreenWidth > 400) {
 else if (ScreenWidth <= 370) {
     ProjectsWidth = '13px'
 } 
+
+let bg = document.querySelectorAll(".background img");
+let hero = document.getElementsByClassName('hero')
+window.addEventListener('scroll', () => {
+    console.log(100  + window.scrollY / 100 + '%');
+    bg[0].style.width = 100  + window.scrollY / 70 + '%';
+    bg[0].style.height = 100  + window.scrollY / 70 + '%';
+
+    bg[1].style.width = 100  + window.scrollY / 100 + '%';
+    bg[1].style.height = 100  + window.scrollY / 100 + '%';
+
+    bg[1].style.top = 0  - window.scrollY / 50 + 'px';
+    bg[1].style.left = 0  - window.scrollY / 50 + 'px';
+        
+    
+});
+
 // Clicked arrow in ifno case make window bigger
 // Arrows.forEach((Arrow, index) => {
 //     Arrow.addEventListener('click', () => {
@@ -37,7 +54,7 @@ InfoCases.forEach((InfoCase, index) => {
     // console.log(InfoCase)
     InfoCase.addEventListener("mouseover", (event) => {
           // highlight the mouseover target
-          console.log(ProjectsWidth);
+        //   console.log(ProjectsWidth);
           InfoCase.style.setProperty('align-items', 'start');
         //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
           ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
@@ -52,7 +69,7 @@ InfoCases.forEach((InfoCase, index) => {
     // console.log(InfoCase)
     InfoCase.addEventListener("mouseout", (event) => {
           // highlight the mouseover target
-          console.log(index);
+        //   console.log(index);
         //   ProjectsIcons[index].style.removeProperty('width');
           ProjectsIcons[index].style.removeProperty('height');
         //   ProjectsTitle[index].style.removeProperty('font-size');
