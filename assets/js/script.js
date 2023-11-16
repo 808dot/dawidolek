@@ -42,7 +42,7 @@ else if (ScreenWidth <= 370) {
     });
 
     InfoCases.forEach((InfoCase, index) => {
-        // console.log(InfoCase)
+        console.log(InfoCase)
         InfoCase.addEventListener("mouseover", (event) => {
             // highlight the mouseover target
             //   console.log(ProjectsWidth);
@@ -115,7 +115,7 @@ InfoCases.forEach((InfoCase, index) => {
             ProjectsLink[prevIndex].style.removeProperty('height');
             ProjectsLink[prevIndex].style.removeProperty('width');
             ProjectsIcons[prevIndex2].style.removeProperty('height');
-            InfoCase.style.setProperty('align-items', 'start');
+            // InfoCase.style.setProperty('align-items', 'start');
         //   ProjectsIcons[index].style.setProperty('width', ProjectsWidth);
             ProjectsIcons[index].style.setProperty('height', ProjectsWidth);
             ProjectsLink[index-3].style.setProperty('height', ProjectsWidth);
