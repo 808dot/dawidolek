@@ -195,7 +195,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-top: 5px;
+  margin-top: 20px;
   opacity: 0;
   overflow: hidden;
   font-family: "VT323", monospace;
@@ -203,7 +203,7 @@ html {
   transition: 0.7s;
 }
 .hero .info-case:hover {
-  max-height: 500px;
+  max-height: 800px;
 }
 .hero .info-case:hover .description {
   opacity: 1;
